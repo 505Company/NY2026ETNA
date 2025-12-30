@@ -11,7 +11,9 @@
 
 <!--    <link rel="stylesheet" href="css/style.css" />-->
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.3/confetti.min.js"></script>
+
+
 
 </head>
 <body>
@@ -271,8 +273,13 @@
     <footer class="hint">
         Свайпай карточку влево/вправо или жми кнопку
     </footer>
-</main>
+    <canvas id="cursor-canvas" aria-hidden="true"></canvas>
+    <canvas id="confetti-canvas" aria-hidden="true"></canvas>
 
-<script src="js/main.js"></script>
+    <div class="cursor-dot" aria-hidden="true"></div>
+
+</main>
+<script src="./js/main.big-confetti.js"></script>
+<!--<script src="js/main.with-confetti.v2.js"></script>-->
 </body>
 </html>

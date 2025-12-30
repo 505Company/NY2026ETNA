@@ -454,3 +454,47 @@ body{
     }
     .page__title{ font-size: 16px; }
 }
+
+/*cursor*/
+/* Canvas с эффектом за курсором */
+#cursor-canvas{
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    background: transparent;
+}
+
+
+/* Опционально: скрыть системный курсор (если хочешь прям как "свой") */
+/* body { cursor: none; } */
+
+.cursor-dot{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10000;
+    background: rgba(255,255,255,0.85);
+    box-shadow:
+            0 0 18px rgba(255,255,255,0.35),
+            0 0 40px rgba(255,255,255,0.18);
+    opacity: 0;
+    transition: opacity .2s ease;
+}
+
+/*конфети*/
+#confetti-canvas{
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 10050; /* выше карточек и выше курсор-эффекта */
+}
