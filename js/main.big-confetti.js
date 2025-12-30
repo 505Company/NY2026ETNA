@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Bright look (without dark overlay)
             ctx.globalCompositeOperation = "lighter";
-            ctx.shadowBlur = 18;
-            ctx.shadowColor = "rgba(255,255,255,0.85)";
+            ctx.shadowBlur = 11;
+            ctx.shadowColor = "rgba(255,255,255,0.65)";
 
             for (let i = pieces.length - 1; i >= 0; i--) {
                 const p = pieces[i];
@@ -157,12 +157,12 @@ document.addEventListener("DOMContentLoaded", () => {
             function mega() {
                 // Single centered burst
                 burst({
-                    count: 260,        // сколько конфетти (поставь 120–400)
-                    originX: 0.50,     // центр по X
-                    originY: 0.62,     // чуть ниже центра (0.5–0.7)
-                    power: 18,         // сила вылета
-                    spread: Math.PI * 1.25,
-                    biasUp: 1.15
+                    count: 120,        // было сотни+ — уменьшаем
+                    originX: 0.50,
+                    originY: 0.62,
+                    power: 13,         // ниже скорость
+                    spread: Math.PI * 1.10,
+                    biasUp: 1.05
                 });
             }
 
